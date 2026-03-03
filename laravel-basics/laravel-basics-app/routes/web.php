@@ -41,3 +41,7 @@ Route::put('/posts/{id}', function ($id) {
 Route::delete('/posts/{id}', function ($id) {
   return 'DELETE /posts/{$id}';
 });
+
+Route::get('/users/{id}', function ($id) {
+  return "User ID: {$id}";
+});
