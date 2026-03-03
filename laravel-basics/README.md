@@ -5,3 +5,5 @@
 - Confirmed basic `Route::get('/')` returning a string.
 - Practiced Route::get/post/put/delete with `/posts` endpoints.
 - Used curl to send different HTTP verbs.
+- Added route parameters `/users/{id}`
+- Added a named route `profile`

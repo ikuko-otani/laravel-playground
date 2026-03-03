@@ -42,6 +42,14 @@ Route::delete('/posts/{id}', function ($id) {
   return 'DELETE /posts/{$id}';
 });
 
-Route::get('/users/{id}', function ($id) {
-  return "User ID: {$id}";
+Route::get('/users/{name?}', function (?string $name = 'John') {
+  return "User Name: {$name}";
 });
+
+Route::get('/category/{category}', function (string $category) {
+  return $category;
+})->whereIn('category', ['movie', 'song', 'painting']);
+
+Route::get('/user/profile', function () {
+  return 'Profile';
+})->name('profile');
