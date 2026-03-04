@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,9 +20,9 @@ Route::get('/contact', function () {
 });
 
 // Route::get/post/put/delete with /posts endpoints
-Route::get('/posts', function () {
-  return 'GET /posts';
-});
+// Route::get('/posts', function () {
+//   return 'GET /posts';
+// });
 
 // NOTE:
 // These POST / PUT / DELETE routes are defined correctly,
@@ -53,3 +54,6 @@ Route::get('/category/{category}', function (string $category) {
 Route::get('/user/profile', function () {
   return 'Profile';
 })->name('profile');
+
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/{id}', [PostController::class, 'show']);
