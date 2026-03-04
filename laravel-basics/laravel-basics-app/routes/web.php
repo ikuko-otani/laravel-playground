@@ -56,4 +56,5 @@ Route::get('/user/profile', function () {
 })->name('profile');
 
 Route::get('/posts', [PostController::class, 'index']);
-Route::get('/posts/{id}', [PostController::class, 'show']);
+Route::get('/posts/{id}', [PostController::class, 'show'])
+  ->whereNumber('id');
