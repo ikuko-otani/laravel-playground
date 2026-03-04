@@ -58,3 +58,6 @@ Route::get('/user/profile', function () {
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/posts/{id}', [PostController::class, 'show'])
   ->whereNumber('id');
+
+use App\Http\Controllers\HealthCheckController;
+Route::get('/health', HealthCheckController::class);
