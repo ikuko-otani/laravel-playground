@@ -43,9 +43,9 @@ Route::delete('/posts/{id}', function ($id) {
   return 'DELETE /posts/{$id}';
 });
 
-Route::get('/users/{name?}', function (?string $name = 'John') {
-  return "User Name: {$name}";
-});
+// Route::get('/users/{name?}', function (?string $name = 'John') {
+//   return "User Name: {$name}";
+// });
 
 Route::get('/category/{category}', function (string $category) {
   return $category;
@@ -60,4 +60,10 @@ Route::get('/posts/{id}', [PostController::class, 'show'])
   ->whereNumber('id');
 
 use App\Http\Controllers\HealthCheckController;
+
 Route::get('/health', HealthCheckController::class);
+
+use App\Http\Controllers\UserController;
+
+Route::get('/users/dashboard', [UserController::class, 'dashboard']);
+Route::get('/users/{username}', [UserController::class, 'profile']);
