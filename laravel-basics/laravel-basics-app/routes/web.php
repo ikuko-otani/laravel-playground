@@ -67,3 +67,7 @@ use App\Http\Controllers\UserController;
 
 Route::get('/users/dashboard', [UserController::class, 'dashboard']);
 Route::get('/users/{username}', [UserController::class, 'profile']);
+
+use App\Http\Controllers\ArticleController;
+
+Route::resource('articles', ArticleController::class);

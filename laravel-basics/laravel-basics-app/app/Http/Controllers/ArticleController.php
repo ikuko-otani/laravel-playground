@@ -11,7 +11,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        return 'Article index - list all articles';
     }
 
     /**
@@ -19,7 +19,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return 'Article create form';
     }
 
     /**
@@ -27,7 +27,8 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate incoming request and save to database in real app.
+        return 'Article store - save new article';
     }
 
     /**
@@ -35,7 +36,7 @@ class ArticleController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return "Article show - Id: {$id}";
     }
 
     /**
@@ -43,7 +44,7 @@ class ArticleController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return "Article edit form - ID: {$id}";
     }
 
     /**
@@ -51,7 +52,7 @@ class ArticleController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        return "Article update - ID: {$id}";
     }
 
     /**
@@ -59,6 +60,6 @@ class ArticleController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return "Article destroy - ID: {$id}";
     }
 }
