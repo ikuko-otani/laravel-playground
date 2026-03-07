@@ -71,3 +71,9 @@ Route::get('/users/{username}', [UserController::class, 'profile']);
 use App\Http\Controllers\ArticleController;
 
 Route::resource('articles', ArticleController::class);
+
+// Only index & show public article listing.
+Route::resource('public-articles', ArticleController::class)->only(['index', 'show']);
+
+// API-style routes (no create/edit views).
+Route::apiResource('article-api', ArticleController::class);
