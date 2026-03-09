@@ -66,7 +66,15 @@ Route::get('/health', HealthCheckController::class);
 use App\Http\Controllers\UserController;
 
 Route::get('/users/dashboard', [UserController::class, 'dashboard']);
+Route::get('/users/create', function () {
+  return view('users.create');
+});
+Route::get('/users/1/edit', function () {
+  return view('users.edit');
+});
 Route::get('/users/{username}', [UserController::class, 'profile']);
+Route::post('/users', [UserController::class, 'store']);
+Route::put('/users/{id}', [UserController::class, 'update']);
 
 use App\Http\Controllers\ArticleController;
 
