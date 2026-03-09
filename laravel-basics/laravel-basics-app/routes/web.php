@@ -77,3 +77,7 @@ Route::resource('public-articles', ArticleController::class)->only(['index', 'sh
 
 // API-style routes (no create/edit views).
 Route::apiResource('article-api', ArticleController::class);
+
+use App\Http\Controllers\ProfileController;
+
+Route::singleton('profile', ProfileController::class);
