@@ -18,3 +18,6 @@
 
 
 # Blade Templates
+
+- Practiced basic Blade syntax, control structures, and components for a small task list UI.
+- Used Blade echo syntax and basic loops to render dynamic lists.

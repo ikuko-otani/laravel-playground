@@ -89,3 +89,11 @@ Route::apiResource('article-api', ArticleController::class);
 use App\Http\Controllers\ProfileController;
 
 Route::singleton('profile', ProfileController::class);
+
+Route::get('/blade-demo', function () {
+  // Display Blade basics demo page
+  return view('/blade.demo', [
+    'name' => 'Samantha',
+    'items' => ['Laravel', 'Blade', 'Components']
+  ]);
+});
