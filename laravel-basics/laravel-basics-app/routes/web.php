@@ -94,6 +94,8 @@ Route::get('/blade-demo', function () {
   // Display Blade basics demo page
   return view('/blade.demo', [
     'name' => 'Samantha',
-    'items' => ['Laravel', 'Blade', 'Components']
+    'items' => ['Laravel', 'Blade', 'Components'],
+    'isAdmin' => false,
+    'records' => [],
   ]);
 });

@@ -21,3 +21,6 @@
 
 - Practiced basic Blade syntax, control structures, and components for a small task list UI.
 - Used Blade echo syntax and basic loops to render dynamic lists.
+- Organized Blade templates using Laravel's view naming convention, wheere dot notation maps to subdirectories under resources/views.
+  - view('blade.demo') -> resources/views/blade/demo.blade.php
+  - view('tasks.index') -> resources/views/tasks/index.blade.php
