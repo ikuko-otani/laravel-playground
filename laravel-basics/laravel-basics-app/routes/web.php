@@ -102,5 +102,10 @@ Route::get('/blade-demo', function () {
       ['id' => 2, 'name' => 'Bob'],
       ['id' => 3, 'name' => 'Charlie']
     ],
+    'isActive' => true,
+    'hasError' => true,
+    'selectedVersion' => 'v2',
+    'versions' => ['v1', 'v2', 'v3'],
+    'user' => (object) ['active' => true],
   ]);
 });
