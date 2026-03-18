@@ -97,5 +97,10 @@ Route::get('/blade-demo', function () {
     'items' => ['Laravel', 'Blade', 'Components'],
     'isAdmin' => false,
     'records' => [],
+    'users' => [
+      ['id' => 1, 'name' => 'Alice'],
+      ['id' => 2, 'name' => 'Bob'],
+      ['id' => 3, 'name' => 'Charlie']
+    ],
   ]);
 });

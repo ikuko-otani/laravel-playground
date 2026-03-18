@@ -37,6 +37,21 @@
   @empty($records)
   <p>$records is empty.</p>
   @endempty
+
+  <h2>Users with loop metadata</h2>
+  <ul>
+    @foreach ($users as $user)
+    <li>
+      #{{ $loop->iteration}} {{ $user['name'] }}
+      @if ($loop->first)
+      (first)
+      @endif
+      @if ($loop->last)
+      (last)
+      @endif
+    </li>
+    @endforeach
+  </ul>
 </body>
 
 </html>
