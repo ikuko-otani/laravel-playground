@@ -71,4 +71,12 @@
             </option>
         @endforeach
     </select>
+
+    <h2>Include shared partial</h2>
+
+    @php
+        $errors = ['Name field is required.', 'Email must be valid'];
+    @endphp
+
+    @include('shared.errors')
 </x-layout>
