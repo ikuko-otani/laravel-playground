@@ -24,3 +24,4 @@
 - Organized Blade templates using Laravel's view naming convention, wheere dot notation maps to subdirectories under resources/views.
   - view('blade.demo') -> resources/views/blade/demo.blade.php
   - view('tasks.index') -> resources/views/tasks/index.blade.php
+- Extracted shared error panel using Blade includes to avoid duplication.
